@@ -3,12 +3,17 @@ export default function Tarea( {tareaIndividual, accionarTarea} ) {
   function handleTarea() {
     accionarTarea(tareaIndividual.id)
   }
+
+  function handleEdit () {
+    console.log('Editando');
+  }
+
   return (
     <div>
       <label>
         <input type="checkbox" checked={tareaIndividual.isComplete} onChange={handleTarea} />
         {tareaIndividual.name}
-        <button>Editar</button>
+        <button onClick={handleEdit}>Editar</button>
       </label>
     </div>
   )
